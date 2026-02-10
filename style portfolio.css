@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Be vietnam Pro",sans-serif;
+
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.logo{
+    width: 70px;
+}
+
+.logo-text{
+  margin-left: -1.2rem;
+  font-size: 28px;
+}
+.logo-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.nav-items{
+  display: flex;
+  gap: 2rem;
+  padding: 0 4rem;
+}
+
+.nav-items div{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-items div a{
+    color: black;
+}
+
+a{
+text-decoration: none;
+}
+
+.nav-items div:hover{
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+
+.btn-pink{
+    background-color: rgb(207, 56, 56);
+    color: black;
+    font-size: 18px;
+    width: fit-content;
+    padding: 0.8rem 1.3rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border: 1px solid black;
+    border-radius: 5px;
+    
+}
+.btn-pink::before{
+    background-color:white;
+    content: "";
+    transform: scaleX(0);
+    transition: all 2s;
+    transform-origin: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    color: black;
+}
+
+.btn-pink:hover::before{
+    transform: scaleX(1);
+    color: black;
+    
+
+}
+.faded-text{
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231,231, 231);
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+    position: absolute;
+    margin-left: 100px;
+}
+
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.hero-section-sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.hero-section-right{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.user-image{
+    padding: 2.5rem;
+    filter: grayscale(1);
+    transition: all 1s;
+    animation: tushar 5s linear infinite;
+    
+}
+
+.user-image img{
+    z-index: -9;
+}
+
+@keyframes tushar {
+    0%{
+     filter: grayscale(0);
+     transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+
+    100%{
+      transform: scale(1);
+      filter: grayscale(0);
+    }
+}
+
+.icon-zigzags{
+
+   z-index: 10;
+
+}
+
+.icon-zigzags{
+    transition: all 1s;
+    animation: tyagi 4s linear  infinite;
+}
+
+
+@keyframes tyagi {
+
+    0%{
+     filter: grayscale(0);
+     transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+      
+    }
+
+    100%{
+      transform: scale(1);
+      filter: grayscale(0);
+    }
+
+}
+
+.project-section{
+    margin-top: 4rem;
+    background-color: rgb(231,231,231);
+}
+
+.page-header{
+   text-align: center;
+   padding-top: 30px;
+    font-size: 90px;
+    color:#e84949;
+}
+
+.project-container{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 3rem 0;
+   display: flex;
+   flex-direction: column;
+   gap: 120px;
+}
+
+.project-card{
+    width: 90%;
+    height: 550px;
+    background-image: url(Project2.png);
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    z-index: 0;
+}
+
+.project-card::before{
+    content: "";
+    position: absolute;
+     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #4e5da8 , #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+    
+}
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+
+.project-number{
+    font-size: 200px;
+    text-align: right;
+    position: absolute;
+    font-weight: 600;
+    color: white;
+    z-index: 10;   
+}
+
+.project-number-right{
+    right: -40px;
+    top: -45px;
+}
+
+.project-number-left{
+    left: -40px;
+    top: -45px;
+}
+
+.project-content {
+    position: absolute;
+    display: flex;
+   flex-direction: column;
+   color: white;
+   padding: 2em;
+   bottom: 20%;
+   z-index: 5;
+   gap: 1em;
+   transition: all 0.4s;
+}
